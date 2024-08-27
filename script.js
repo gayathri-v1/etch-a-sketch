@@ -73,7 +73,7 @@ function createGrid(num){
         outer.append(inner);
         
     }
-    mouseOverEvent();
+    mouseOverEvent('black');
     
     }
 
