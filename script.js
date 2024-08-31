@@ -52,13 +52,15 @@ const button= document.querySelector('button');
 let defaultNumber=16;
 button.addEventListener('click',()=>{
     let answer=prompt("How many grids you need? ");
-    if(answer>100|| answer===''||!isNaN(answer)){
-        answer=prompt("Entry is Invalid. Enter below or equal 100");
-    }
+    
+    if(answer<=100){
     defaultNumber=answer;
     gridContainer.innerHTML='';
     createGrid(defaultNumber);
-    
+    }
+    else{
+        answer=prompt("Entry is Invalid. Enter below or equal 100");
+    }
 });
 
 function createGrid(num){
